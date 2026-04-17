@@ -20,7 +20,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Bot Running ✅")
+        self.wfile.write("Bot Running ✅".encode("utf-8"))
 
 def run_server():
     server = HTTPServer(("0.0.0.0", 10000), Handler)
